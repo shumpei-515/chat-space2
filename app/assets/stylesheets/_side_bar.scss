@@ -2,75 +2,75 @@
   height:100%;
   width:100vw;
   display :flex;
-}
-
-
-.chat-side {
-  height:100vh;
-  width:300px;
-  float:left;
-
-  &__side-header{
-    background-color:#253141;
-    color:#FFFFFF;
-    height:96px;
-    padding: 0 20px;
-    display :flex;
-    align-items: center;
-  
-    &__side-header__box {
-      display: flex;
-      justify-content: space-between;
-      width: 100%;
-      font-weight: bold;  
-  
-      &__side-header__user {
+  .chat-side {
+    height:100vh;
+    width:300px;
+    float:left;
     
+      .side-header{
+      background-color:#253141;
+      color:#FFFFFF;
+      height:96px;
+      padding: 0 20px;
+      display :flex;
+      align-items: center;
+    
+      &__side-header__box {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        font-weight: bold;  
+    
+        &__side-header__user {
+      
+        }
       }
+    
+      .side-header__icon {
+        display: flex;
+        justify-content:flex-end;
+        width: 100%;
+        font-weight: bold;
+        list-style: none;    
+    
+        .side-header__icon__pencil {
+          margin-left: 0.3rem;
+        }
+        
+        .side-header__icon__gear {
+          margin-left: 0.3rem;
+        }
+    
+        .icon {
+          color: white;
+        }
+      }
+    
     }
   
-    &__side-header__icon {
-      display: flex;
-      justify-content:flex-end;
-      width: 100%;
-      font-weight: bold;
+      .groups{
+      background-color: #2f3e51;
+      height: calc(100vh - 96px) ;
+      padding-top: 20px;
+      padding-left: 20px;
+      padding-right: 20px;
   
-      &__side-header__icon__pencil {
-        margin-left: 0.3rem;
-      }
-      
-      &__side-header__icon__gear {
-        margin-left: 0.3rem;
-      }
+        .groups__log {
+        height:71px;
   
-      &__icon {
-        color: white;
-      }
-    }
-  
-  }
-
-  &__groups{
-    background-color: #2f3e51;
-    height: calc(100vh - 96px) ;
-    padding-top: 20px;
-    padding-left: 20px;
-    padding-right: 20px;
-
-    &__groups__log {
-      height:71px;
-
-      &__groups__log__group {
-        font-size:15px;
-        color:#FFFFFF;
-      }
-      
-      &__groups__log__message {
-        font-size: 11px;
-        color:#FFFFFF;
-        padding-top: 5px;
-        padding-bottom: 40px;
+          .groups__log__group {
+          font-size:15px;
+          color:#FFFFFF;
+        }
+        
+          .groups__log__message {
+          font-size: 11px;
+          color:#FFFFFF;
+          padding-top: 5px;
+          padding-bottom: 40px;
+        }
       }
     }
   }
 }
+
