@@ -1,0 +1,23 @@
+.chat-side
+
+  .side-header
+    .side-headder__box
+      %p.side-header__box__user-name
+        currentUser
+    %ul.side-header__icon
+      %li.side-header__icon__pencil
+        = link_to '#',{class:"icon"} do
+          %i.fa.fa-edit
+         
+      %li.side-header__icon__gear
+        = link_to '#',{class:"icon"} do
+          %i.fa.fa-cog
+          
+
+  .groups
+    .groups__log
+      .groups__log__group
+        %p.group__group-name rain
+    
+      .groups__log__message
+        %p.group__latest-message まだメッセージがありません
