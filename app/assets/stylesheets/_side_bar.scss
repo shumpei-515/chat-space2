@@ -20,24 +20,20 @@
         justify-content: space-between;
         width: 100%;
         font-weight: bold;  
-    
-        &__side-header__user {
-      
-        }
       }
     
-      .side-header__icon {
+      &__icon {
         display: flex;
         justify-content:flex-end;
         width: 100%;
         font-weight: bold;
         list-style: none;    
     
-        .side-header__icon__pencil {
+        &__pencil {
           margin-left: 0.3rem;
         }
         
-        .side-header__icon__gear {
+        &__gear {
           margin-left: 0.3rem;
         }
     
@@ -55,15 +51,15 @@
       padding-left: 20px;
       padding-right: 20px;
   
-        .groups__log {
+        &__log {
         height:71px;
   
-          .groups__log__group {
+          &__group {
           font-size:15px;
           color:#FFFFFF;
         }
         
-          .groups__log__message {
+          &__message {
           font-size: 11px;
           color:#FFFFFF;
           padding-top: 5px;

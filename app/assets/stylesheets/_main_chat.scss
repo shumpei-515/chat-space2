@@ -13,21 +13,22 @@
       justify-content: space-between;
       border-bottom: solid 1px #eee;
       overflow: scroll;
-      .main-header__left-box {
+    
+      &__left-box {
         margin-top: 35px;
   
-        .main-header__left-box__group-name {
+        &__group-name {
           font-size: 20px;
           color: #333;
           margin-bottom: 15px;
         }
-        .main-header__left-box__member-list {
+        &__member-list {
           font-size: 12px;
           color: #999999;
           display:flex;
         }  
       }
-      .main-header__edit-btn {
+      &__edit-btn {
       color: #38aef0;
       height: 40px;
       line-height: 40px;
@@ -44,22 +45,22 @@
     padding: 46px, 40px,0px,40px;
     height: calc(100vh - 186px);
     overflow: scroll;
-      .messages__feed {
+      &__feed {
       padding: 46px 40px;
       background-color: #fafafa;
       overflow: scroll;
 
-        .messages__feed__log {
+        &__log {
         display: flex;
         margin-bottom: 10px;
 
-          .messages__feed__log__talker {
+          &__talker {
           font-size:16px;
           color: #434A54;
           font:bold;
         }
         
-          .messages__feed__log__date {
+          &__date {
           color: #999999;
           font-size: 12px;
           margin-left: 10px;
@@ -67,7 +68,7 @@
         
       }
 
-        .messages__feed__text{
+        &__text{
         font-size: 14px;
         color: #434A54;
       }
@@ -87,7 +88,7 @@
         display: flex;
         height: 50px;
 
-          .input-box__text {
+          &__text {
           height: 50px;
           width: 100%;
           padding: 0 40px 0 10px;
@@ -95,7 +96,7 @@
           border-style: none;
         }
         
-          .input-box__image {
+          &__image {
           font-size: 1.3rem;
           position: absolute;
           top: 10px;
@@ -109,7 +110,7 @@
             -webkit-font-smoothing: antialiased;
           }
 
-            .input-box__image__file {
+            &__image__file {
             display:none;
           }
         }
