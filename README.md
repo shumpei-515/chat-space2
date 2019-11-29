@@ -45,3 +45,4 @@
 # Association
 - message belongs_to :user
 - message belongs_to :group
+ 
