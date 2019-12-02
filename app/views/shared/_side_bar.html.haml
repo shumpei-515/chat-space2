@@ -3,7 +3,7 @@
   .side-header
     .side-headder__box
       %p.side-header__box__user-name
-        currentUser
+        = current_user.name
     %ul.side-header__icon
       %li.side-header__icon__pencil
         = link_to new_group_path,{class:"icon"} do
@@ -15,9 +15,13 @@
           
 
   .groups
-    .groups__log
-      .groups__log__group
-        %p.group__group-name rain
+    - current_user.groups.each do |group|
+      .groups__log
+        = link_to '#' do
+          .groups__log__group
+            %p.group__group-name 
+              = group.name
     
-      .groups__log__message
-        %p.group__latest-message まだメッセージがありません
+          .groups__log__message
+            %p.group__latest-message 
+              まだメッセージがありません
