@@ -12,16 +12,16 @@
       %li.side-header__icon__gear
         = link_to edit_user_path(current_user),{class:"icon"} do
           %i.fa.fa-cog
-          
+
 
   .groups
     - current_user.groups.each do |group|
       .groups__log
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .groups__log__group
             %p.group__group-name 
               = group.name
     
           .groups__log__message
             %p.group__latest-message 
-              まだメッセージがありません
+              = group.show_last_message
