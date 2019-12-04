@@ -39,24 +39,28 @@
       right: 40px;
       }
     }
-    .messages {
+    .message{
     background-color: #fafafa;
     width: calc(100vw-300px);
-    padding: 46px, 40px,0px,40px;
+    padding: 46px;
+    padding-left: 40px;
+    padding-right: 40px;
     height: calc(100vh - 186px);
     overflow: scroll;
-      &__feed {
-      padding: 46px 40px;
-      background-color: #fafafa;
-      overflow: scroll;
+      
+      &__feed{
+      padding-bottom:46px;
 
-        &__log {
+        &__upper-message {
+        padding:12px;
+        background-color: #fafafa;
+        overflow: scroll;
         display: flex;
         margin-bottom: 10px;
 
-          &__talker {
+          &__username {
           font-size:16px;
-          color: #434A54;
+          color: #333333;
           font:bold;
         }
         
@@ -65,66 +69,114 @@
           font-size: 12px;
           margin-left: 10px;
         }
-        
       }
 
-        &__text{
+        &__lower-message{
         font-size: 14px;
         color: #434A54;
       }
     }
   }
-    .form {
+  .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
-    padding: 20px 40px;
-    background-color: #ddd;
-    
-      .new_message {
-      display: flex;
+    padding: 20px 50px 20px 40px;
+    position: relative;
+    width:100%;
 
-        .input-box {
-        position: relative;
-        width: 100%;
-        display: flex;
-        height: 50px;
+    &__message {
+      border: none;
+      height: 50px;
+      width: calc(100% - 120px);
+      
+    }
 
-          &__text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-        
-          &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-            .fa {
-            display: inline-block;
-            font-size: inherit;
-            text-rendering: auto;
-            -webkit-font-smoothing: antialiased;
-          }
+    .form__mask__image {
+      font-size: 20px;
+      line-height: 50px;
+      position:absolute;
+      right:200px;
+    }
+    .hidden {
+      display: none;
+    }
 
-            &__image__file {
-            display:none;
-          }
-        }
-      }
-
-        .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color: #38aef0;
-        color: white;
-        cursor: pointer;
-      }
+    &__submit {
+      background-color:lightskyblue;
+      border: none;
+      color: white;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
+      // position:absolute;
     }
   }
-  }
+}
+//     .form {
+//     height: 90px;
+//     padding: 20px 40px;
+//     background-color: #ddd;
+    
+//       .new_message {
+//       display: flex;
+//       width:100%;
+
+//         .input-box {
+//         position: relative;
+//         width: 100%;
+//         display: flex;
+//         height: 50px;
+
+//           &__text {
+//           height: 50px;
+//           width: calc(100%;
+//           padding: 0 40px 0 10px;
+//           color: #434a54;
+//           border-style: none;
+//           position: absolute;
+          
+//         }
+        
+//           &__mask {
+//           font-size: 1.3rem;
+//           position: absolute;
+//           top: 10px;
+//           right: 10px;
+//           cursor: pointer;
+          
+    
+//             .input-box__image {
+//               &__icon {
+//               display: inline-block;
+//               font-size: inherit;
+              
+//               // text-rendering: auto;
+//               // -webkit-font-smoothing: antialiased;
+//               // font: normal normal normal 14px/1 FontAwesome;
+//             }
+
+//               &__file {
+//               display:none;
+//             }
+//           }
+//         }
+//       }
+    
+
+//         .form__submit {
+//         width: 100px;
+//         height: 50px;
+//         padding: 0 30px;
+//         margin-left: 15px;
+//         background-color: #38aef0;
+//         color: white;
+//         cursor: pointer;
+
+//       }
+//     }
+//   }
+// }
 }
