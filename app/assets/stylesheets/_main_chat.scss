@@ -39,7 +39,7 @@
       right: 40px;
       }
     }
-    .message{
+    .messages{
     background-color: #fafafa;
     width: calc(100vw-300px);
     padding: 46px;
@@ -97,6 +97,7 @@
       line-height: 50px;
       position:absolute;
       right:200px;
+      top:35px;
     }
     .hidden {
       display: none;
