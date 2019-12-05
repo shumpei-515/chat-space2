@@ -1,7 +1,8 @@
 $(function(){
 function buildHTML(message){
 
-  if ( message.image ) {
+  img = message.image ? `</div><img src=${message.image} ></div>`: "";
+  
     var html =
      `<div class="message" data-message-id=${message.id}>
         <div class="upper-message">
@@ -16,29 +17,9 @@ function buildHTML(message){
           <p class="lower-message__content">
             ${message.content}
           </p>
-        </div>
-        <img src=${message.image} >
-      </div>`
+          ${img}`
     return html;
-  } else {
-    var html =
-     `<div class="message" data-message-id=${message.id}>
-        <div class="upper-message">
-          <div class="upper-message__user-name">
-            ${message.user_name}
-          </div>
-          <div class="upper-message__date">
-            ${message.date}
-          </div>
-        </div>
-        <div class="lower-message">
-          <p class="lower-message__content">
-            ${message.content}
-          </p>
-        </div>
-      </div>`
-    return html;
-  };
+  
 
 }  
   $('#new_message').on("submit", function(e){
@@ -47,8 +28,8 @@ function buildHTML(message){
     var url = $(this).attr('action')
 
     $.ajax({
-      url: url,  //同期通信でいう『パス』
-      type: 'POST',  //同期通信でいう『HTTPメソッド』
+      url: url,
+      type: 'POST',
       data: formData,  
       dataType: 'json',
       processData: false,
