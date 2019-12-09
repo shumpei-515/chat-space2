@@ -63,8 +63,6 @@ function buildHTML(message){
       })
   
       .done(function(messages) {
-        // console.log("aa")
-        // console.log(messages)
         messages.forEach(function(message){
         var html = buildHTML(message);
         $('.messages').append(html);  
