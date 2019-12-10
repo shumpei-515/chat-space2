@@ -52,9 +52,9 @@ function buildHTML(message){
   })
 
   var reloadMessages =function() {
+    if (window.location.href.match(/\/groups\/\d+\/messages/)) {
     last_message_id = $('.message__feed:last').data("message-id");
-      
-    
+
       $.ajax({
         url:"api/messages",
         type: 'get',
@@ -73,6 +73,7 @@ function buildHTML(message){
       });
   
       }
+    }
   setInterval(reloadMessages, 7000);
 });
 
