@@ -5,21 +5,22 @@ function buildHTML(message){
   image = message.image ? `</div><img src=${message.image} ></div>`: "";
   
     var html =
-     `<div class="message__feed" data-message-id=${message.id}>
-        <div class="upper-message">
-          <div class="upper-message__user-name">
-            ${message.user_name}
+     
+      `<div class="message__feed" data-message-id=${message.id}>
+          <div class="message__feed__upper-message">
+            <div class="message__feed__upper-message__user-name">
+              ${message.user_name}
+            </div>
+            <div class="message__feed__upper-message__date">
+              ${message.created_at}
+            </div>
           </div>
-          <div class="upper-message__date">
-            ${message.created_at}
-          </div>
-        </div>
-        <div class="lower-message">
-          <p class="lower-message__content">
-            ${message.content}
-          </p>
-          ${image}
-        </div>`
+          <div class="message__feed__lower-message">
+            <p class="lower-message__content">
+              ${message.content}
+            </p>
+            ${image}
+          </div>`
 
     return html;
   }
@@ -65,7 +66,9 @@ function buildHTML(message){
       .done(function(messages) {
         messages.forEach(function(message){
         var html = buildHTML(message);
-        $('.messages').append(html);  
+        $('.messages').append(html);
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
+        
       })
       })
       .fail(function() {
@@ -76,4 +79,5 @@ function buildHTML(message){
     }
   setInterval(reloadMessages, 7000);
 });
+
 

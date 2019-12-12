@@ -47,7 +47,8 @@
     padding-right: 40px;
     height: calc(100vh - 186px);
     overflow: scroll;
-      
+  }
+      .message{
       &__feed{
       padding-bottom:46px;
 
@@ -58,7 +59,7 @@
         display: flex;
         margin-bottom: 10px;
 
-          &__username {
+          &__user-name {
           font-size:16px;
           color: #333333;
           font:bold;
